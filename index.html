@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodNow</title>
+
+<style>
+   body{background:lightgray; font-family: "Roboto" }
+
+  .logo {
+    background-color:rgb(206, 63, 63);
+     color:white;
+      padding: 15px;
+    border-radius: 20px
+  } 
+
+  h1{margin: 0; font-family: "Righteous"; font-weight:}
+  h2{margin: 0;font-size: 20px; font-family: "Righteous"}
+  h3{font-size: 25px; margin-bottom: 5px;}
+  h4{margin-top: 0px; margin-bottom: 5px; font-size: 20px; font-weight: bold;}
+
+  .produto {background:rgb(255, 255, 255);
+   padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 5px solid white
+  }
+
+  img{width: 150px; 
+  border-radius: 15px;
+  float: right}
+
+  .lata{width: 130px}
+  .laranja{width: 95px}
+
+  .botao
+  {background: limegreen;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;}
+</style>
+
+  </head>
+  <body>
+    <div class="logo"> 
+      <h1>FoodNow</h1>
+      <h2>Monte seu pedido e receba em 15 minutos !<h/2>
+    </div>
+
+    <h3> Primeiro, seu prato:</h3>
+    
+    <div id="frango" class="produto" onclick="escolherFrango()">
+      <img src="https://img.elo7.com.br/product/original/22565B3/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-parede.jpg">
+      <h4>Frango Yin-Yang</h4>
+      <p> Frango com salada de tomates e fritas</p>
+      <p><strong>R$ 19,90</strong></p>
+    </div> 
+
+    <div id="bife" class="produto" onclick="escolherBife()">
+      <img src="https://img.elo7.com.br/product/zoom/258B7CB/adesivo-parede-restaurante-prato-feito-comida-caseira-lenha-adesivo-restaurante-fritas-salada.jpg">
+      <h4> Bife à Milanesa</h4>
+      <p> Arroz, Feijão, Salada, Bife e fritas</p>
+      <p><strong> R$ 25,50</strong></p>
+    </div>
+    
+    <h3> Agora, sua bebida:</h3>
+
+    <div id="refri" class="produto" onclick="escolherRefri()">
+      <img class ="lata" src="https://foodjardim.com.br/wp-content/uploads/2021/01/refri-lata.jpg">
+      <h4> Refrigerante</h4>
+      <p> Refrigerante em lata 350ml</p>
+      <p><strong> R$ 4,99</strong></p>
+    </div>
+
+    <div id="suco" class="produto" onclick="escolherLaranja()">
+      <img class ="laranja" src="https://www.supercitrus.ind.br/wp-content/uploads/2020/04/suco-de-laranja-fresco-para-beber-no-copo-de-garrafa.jpg">
+      <h4>Suco Natural</h4>
+      <p> Suco natural da fruta laranja 350ml</p>
+      <p><strong> R$ 5,50</strong></p>
+    </div>  
+      
+    <h3> Por fim, a sua sobremesa:</h3>
+      
+    <div id="pudim" class="produto" onclick="escolherPudim()">
+      <img  src="https://s2.glbimg.com/115DQucrWsNOUxf_ncmMUisprZI=/0x0:1080x819/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/w/a/cB6VP5QoOByFKEuCleIQ/jonreceitas-109758346-416338779271002-5424220606850697813-n.jpg">
+      <h4>Pudim</h4>
+      <p> Pudim de leite condensado</p>
+      <p><strong> R$ 7,90</strong></p>
+    </div>
+
+    <div id="sorvete" class="produto" onclick="escolherSorvete()">
+      <img src="https://blog.finamac.com/wp-content/uploads/2019/06/287027-conheca-aqui-x-dicas-para-inovar-no-sorvete-de-casquinha.jpg">
+     <h4>Sorvete</h4>
+     <p> Sorvete de casquinha, sabores sortidos</p>
+     <p><strong> R$ 3,00</strong></p>
+    </div>
+
+     <div class="botao" onclick="finalizarPedido()">
+       Finalizar pedido
+     </div>
+  
+    <script>
+      let prato;
+      let bebida;
+      let sobremesa;
+
+     
+     
+     
+    function escolherFrango(){
+     document.getElementById("frango").style.borderColor = "green"
+     document.getElementById("bife").style.borderColor = "white"
+      prato="Frango"}
+
+     function escolherBife(){
+     document.getElementById("bife").style.borderColor = "green"
+     document.getElementById("frango").style.borderColor = "white"
+     prato="Bife"}
+
+     function escolherRefri(){
+    document.getElementById("refri").style.borderColor = "green"
+    document.getElementById("suco").style.borderColor = "white"
+    bebida="Refri"}
+
+     function escolherLaranja(){
+    document.getElementById("suco").style.borderColor = "green"
+    document.getElementById("refri").style.borderColor = "white"
+    bebida="Suco"}
+
+    function escolherPudim(){
+    document.getElementById("pudim").style.borderColor = "green"
+    document.getElementById("sorvete").style.borderColor = "white"
+    sobremesa="Pudim"}
+    
+    function escolherSorvete() {
+    document.getElementById("sorvete").style.borderColor = "green"
+    document.getElementById("pudim").style.borderColor = "white"
+    sobremesa="Sorvete"}  
+
+    
+    
+    function finalizarPedido() {
+      let mensagem;
+      mensagem = "Olá, gostaria de pedir um combo: " + prato + ", " + bebida + " e " + sobremesa; 
+
+      window.open("https://wa.me/+5538988331222?text=" + mensagem)
+      
+    }
+    
+
+    
+
+     
+    </script>  
+  </body>
+</html>
